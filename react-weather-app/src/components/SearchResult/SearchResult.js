@@ -1,12 +1,14 @@
 import React from "react";
 
+import cssClass from "./SearchResult.css";
+
 const searchResult = props => {
     return (
-        <div>
+        <div className={cssClass.bg}>
             <br />
             Location: {props.result.name}, {props.result.sys.country}
             <br />
-            Temperature: {props.result.main.temp}
+            Temperature: {props.result.main.temp}° C
             <br />
             Humidity: {props.result.main.humidity}
             <br />

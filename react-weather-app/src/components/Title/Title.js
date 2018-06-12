@@ -1,11 +1,12 @@
 import React from "react";
 
+import cssClass from "./Title.css";
+
 const title = () => {
     return (
-        <div>
-            <h1>Weather Finder</h1>
-            <p>A Simple ReactJS Weather App</p>
-            <span role="img">Built With ❤️ By Vaibhav Gupta</span>
+        <div className={cssClass.TitleBlock}>
+            <p className={cssClass.heading}>Weather Finder</p>
+            <p className={cssClass.subheading}>A Simple ReactJS Weather App</p>
         </div>
     );
 };

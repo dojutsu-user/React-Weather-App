@@ -1,0 +1,69 @@
+.input {
+    border: none;
+    border-bottom: 2px solid rgb(161, 161, 161);
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 3%;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+}
+
+.input:focus {
+    width: inherit;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #eabe7c;
+    transition: border-bottom 0.2s ease;
+}
+
+.SearchButton {
+    position: relative;
+    background-color: #fffd6b;
+    border: none;
+    height: 50px;
+    font-weight: 300;
+    font-family: "Dancing Script", sans-serif;
+    font-size: 30px;
+    color: #313131;
+    outline: none;
+    width: 150px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.SearchButton:after {
+    outline: none;
+    content: "";
+    background: #e6e6e6;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.SearchButton:active:after {
+    outline: none;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+@media (max-width: 760px) {
+    .SearchButton {
+        outline: none;
+        margin-top: 30px;
+    }
+}
+
+.SearchButton:hover {
+    background-color: #fff784;
+}

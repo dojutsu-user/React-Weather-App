@@ -1,0 +1,18 @@
+.Color {
+    margin-top: 50px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    color: white;
+}
+
+.Name {
+    text-decoration: none;
+    color: white !important;
+}
+
+.Name {
+    color:white;
+    cursor: pointer;
+    text-decoration: underline;
+}
