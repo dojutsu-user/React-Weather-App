@@ -19,7 +19,7 @@ class SearchForm extends PureComponent {
 
     apiCallHandler = () => {
         axios
-            .get(`https://api.openweathermap.org/data/2.5/weather?q=${this.state.city},${this.state.countryCode}&appid=${this.state.apiKey}&units=metric`)
+            .get(`https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?q=${this.state.city},${this.state.countryCode}&appid=${this.state.apiKey}&units=metric`)
             .then(response =>
                 this.setState({
                     result: response.data,
