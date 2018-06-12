@@ -5,7 +5,7 @@ const title = () => {
         <div>
             <h1>Weather Finder</h1>
             <p>A Simple ReactJS Weather App</p>
-            <p>Built With ❤️ By Vaibhav Gupta</p>
+            <span role="img">Built With ❤️ By Vaibhav Gupta</span>
         </div>
     );
 };

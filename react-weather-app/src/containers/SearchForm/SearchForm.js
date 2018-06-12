@@ -9,7 +9,7 @@ class SearchForm extends PureComponent {
         countryCode: "",
         apiKey: "10b3f273e1f35bf786b02ac28b9814b0",
         result: null,
-        showResult: false
+        showResult: false,
     };
 
     searchTextHandler = event => {
@@ -18,15 +18,20 @@ class SearchForm extends PureComponent {
 
     apiCallHandler = () => {
         axios
-            .get(
-                `http://api.openweathermap.org/data/2.5/weather?q=${this.state.city},${this.state.countryCode}&appid=${this.state.apiKey}`
-            )
-            .then(response =>this.setState({
+            .get(`http://api.openweathermap.org/data/2.5/weather?q=${this.state.city},${this.state.countryCode}&appid=${this.state.apiKey}`)
+            .then(response =>
+                this.setState({
                     result: response.data,
                     showResult: true
                 })
             )
-            .catch(error => console.log("Error"));
+            .catch(error => {
+                this.setState({
+                    result: null,
+                    showResult: false
+                })
+                console.log(error)
+            });
     };
 
     render() {
@@ -47,9 +52,11 @@ class SearchForm extends PureComponent {
                     value={this.state.countryCode}
                 />
                 <button onClick={this.apiCallHandler}>Search</button>
-                {this.state.showResult ? (
+                {/* Show Result */
+                this.state.showResult ? (
                     <SearchResults result={this.state.result} />
                 ) : null}
+                
             </div>
         );
     }
