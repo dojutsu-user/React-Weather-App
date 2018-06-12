@@ -11,7 +11,7 @@ const footer = () => {
             </a>{" "}
             |{" "}
             <a className={cssClass.Github} href="https://github.com/dojutsu-user/React-Weather-App">
-                <i class="fab fa-github fa-1x" />
+                <i class="fab fa-github fa-1x"></i>
             </a>
         </div>
     );
