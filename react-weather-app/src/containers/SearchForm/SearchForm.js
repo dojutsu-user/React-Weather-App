@@ -32,6 +32,7 @@ class SearchForm extends PureComponent {
                     showResult: false
                 });
                 console.log(error);
+                alert(error);
             });
     };
 
